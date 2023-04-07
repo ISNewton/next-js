@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import classes from './Nav.module.css'
-const Nav = () => {
+const Nav = (props) => {
 
     return (
+        <>
+
         <header >
             <Link href='/'>
                     <div >Next Auth</div>
@@ -27,6 +29,13 @@ const Nav = () => {
                 </ul>
             </nav>
         </header>
+
+        <main>
+            {props.children}
+        </main>
+        </>
+
+        
     )
 }
 
